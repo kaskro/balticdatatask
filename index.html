@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script
+      src="https://kit.fontawesome.com/a36d99299a.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="app.css" />
+    <title>Baltic Data uzdevums</title>
+  </head>
+
+  <body>
+    <!-- Main container -->
+    <div class="container">
+      <!-- List section  -->
+      <section>
+        <ul name="articleList" id="articleList" class="article-list">
+          <li>Šis saraksts ir tukšs.</li>
+        </ul>
+      </section>
+      <!-- Menu section -->
+      <section>
+        <ul class="navigation">
+          <li>
+            <div class="button">
+              <a href="#" onclick="showMenu('img')">Pievienot bildi</a>
+            </div>
+          </li>
+          <li>
+            <div class="button">
+              <a href="#" onclick="showMenu('txt')">Pievienot tekstu</a>
+            </div>
+          </li>
+          <li>
+            <div class="button">
+              <a href="#" onclick="showMenu('all')"
+                >Pievienot bildi un tekstu</a
+              >
+            </div>
+          </li>
+        </ul>
+      </section>
+      <!-- Form section  -->
+      <section>
+        <!-- Image section -->
+        <section id="imageSection" class="hide">
+          <div class="section-spacing">
+            <p>Lūdzu izvēlaties bildi, kuru vēlaties pievienot:</p>
+          </div>
+          <div class="images-container">
+            <div class="images-container__selection-box">
+              <input
+                type="radio"
+                name="selectedImage"
+                checked
+                id="image1"
+                value="https://i.picsum.photos/id/5/800/600.jpg"
+              />
+              <label for="image1">
+                <img
+                  class="js-responsive-image"
+                  src="https://i.picsum.photos/id/5/800/600.jpg"
+                  alt="https://i.picsum.photos/id/5/800/600.jpg"
+                />
+              </label>
+            </div>
+
+            <div class="images-container__selection-box">
+              <input
+                type="radio"
+                name="selectedImage"
+                id="image2"
+                value="https://i.picsum.photos/id/620/800/600.jpg"
+              />
+              <label for="image2">
+                <img
+                  class="js-responsive-image"
+                  src="https://i.picsum.photos/id/620/800/600.jpg"
+                  alt="https://i.picsum.photos/id/620/800/600.jpg"
+                />
+              </label>
+            </div>
+
+            <div class="images-container__selection-box">
+              <input
+                type="radio"
+                name="selectedImage"
+                id="image3"
+                value="https://i.picsum.photos/id/76/800/600.jpg"
+              />
+              <label for="image3">
+                <img
+                  class="js-responsive-image"
+                  src="https://i.picsum.photos/id/76/800/600.jpg"
+                  alt="https://i.picsum.photos/id/76/800/600.jpg"
+                />
+              </label>
+            </div>
+          </div>
+
+          <div class="section-spacing">
+            <p>Vai ievadiet saiti uz bildi, kuru vēlaties izmantot:</p>
+          </div>
+
+          <div class="section-spacing">
+            <input
+              class="custom-input"
+              type="text"
+              name="selectedImageLink"
+              id="selectedImageLink"
+            />
+          </div>
+        </section>
+        <!-- Text section -->
+        <section id="textSection" class="hide">
+          <div class="section-spacing">
+            <p>Lūdzu ievadiet tekstu, kuru vēlaties pievienot:</p>
+          </div>
+
+          <div class="section-spacing">
+            <textarea
+              class="custom-input"
+              name="userText"
+              id="userText"
+              cols="30"
+              rows="10"
+            ></textarea>
+          </div>
+
+          <div class="options-container">
+            <div class="options-container__option-box">
+              <p>Izvēlaties fonta izmēru:</p>
+              <input
+                type="range"
+                value="16"
+                min="8"
+                max="36"
+                name="userSelectedFontSize"
+                id="userSelectedFontSize"
+              />
+              <output name="sliderValue" id="sliderValue">16</output>
+            </div>
+            <div class="options-container__option-box">
+              <p>Izvēlaties fonta krāsu:</p>
+              <input
+                type="color"
+                name="userSelectedFontColor"
+                id="userSelectedFontColor"
+              />
+            </div>
+            <div class="options-container__option-box">
+              <p>Izvēlaties fona krāsu tekstam:</p>
+              <input
+                type="color"
+                name="userSelectedBackgroundColor"
+                id="userSelectedBackgroundColor"
+                value="#FFFFFF"
+              />
+            </div>
+          </div>
+        </section>
+        <!-- Form adding button -->
+        <section id="addButton" class="add-button-container hide">
+          <div class="button">
+            <a href="#" onclick="addArticle()">Pievienot sarakstam</a>
+          </div>
+        </section>
+      </section>
+    </div>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="app.js"></script>
+</html>

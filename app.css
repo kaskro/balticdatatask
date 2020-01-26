@@ -1,0 +1,163 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  overflow-wrap: break-word;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  width: 100%;
+  padding: 1rem;
+}
+
+/* List section */
+
+.article-list li {
+  padding: 1rem;
+  border: 1px solid gray;
+  margin-top: 0.5rem;
+  border-radius: 0.4rem;
+}
+
+.js-action-icons {
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-content: stretch;
+  border-bottom: 1px solid rgba(99, 100, 114, 0.3);
+}
+
+.js-article {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.js-article-box {
+  width: 100%;
+  padding: 1rem;
+}
+
+/* Menu section  */
+
+.navigation {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.navigation li {
+  margin: 1rem;
+}
+
+/* Image section */
+.images-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.images-container__selection-box {
+  width: 25%;
+  margin: 1rem;
+}
+
+input[type="radio"] {
+  position: absolute;
+  visibility: hidden;
+}
+
+input[type="radio"]:checked + label > img {
+  border: 1px solid #fff;
+  box-shadow: 0 0 3px 3px rgb(18, 26, 29);
+}
+
+/* Text section */
+
+.options-container {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.options-container__option-box {
+  padding: 1rem;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+.options-container__option-box input {
+  flex-grow: 1;
+  margin: 0 1rem;
+}
+
+/* Form button section */
+.add-button-container {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+/* Universal */
+
+.button a {
+  font-size: 1rem;
+  margin: 0.4rem;
+  border-radius: 0.3rem;
+  color: black;
+  border: 1px solid slategray;
+  padding: 0.5rem;
+}
+
+.button a:hover {
+  font-size: 1rem;
+  background-color: black;
+  color: white;
+  margin: 0.4rem;
+  border-radius: 0.3rem;
+  border: 1px solid slategray;
+  padding: 0.5rem;
+}
+
+.section-spacing {
+  width: 100%;
+  padding: 1rem;
+}
+
+.custom-input {
+  padding: 1rem;
+  width: 100%;
+  border-radius: 0.3rem;
+  border: 1px solid slategray;
+}
+
+.hide {
+  display: none;
+}
+
+.js-responsive-image {
+  padding: 0.4rem;
+  width: 100%;
+  height: auto;
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .js-article-box {
+    width: 50%;
+    padding: 1rem;
+  }
+}
