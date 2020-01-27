@@ -11,7 +11,12 @@ function Article(imageLink, text, type) {
   this.type = type;
 }
 
-let articles = [];
+// Retrieving our data and converting it back into an array
+let articles =
+  localStorage.getItem("articles") != null
+    ? JSON.parse(localStorage.getItem("articles"))
+    : [];
+
 let action;
 
 // Get refferences to objets in DOM
@@ -129,6 +134,8 @@ function updateArticleList() {
   } else {
     articleList.append($("<li>").text("Šis saraksts ir tukšs."));
   }
+  // Storing our array as a string in local storage
+  localStorage.setItem("articles", JSON.stringify(articles));
 }
 
 function createMenuIcon(action, id, icon) {
